@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Resume - Khadijah McDole Gunn</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <style>
+    .accordion-header {
+      cursor: pointer;
+      padding: 12px;
+      background-color: #b22244;
+      color: #ffb703;
+      margin-bottom: 5px;
+      border-radius: 12px;
+      font-weight: 700;
+      letter-spacing: 1.1px;
+      box-shadow: 0 4px 12px rgba(216, 27, 76, 0.6);
+      transition: background-color 0.3s ease;
+      user-select: none;
+    }
+    .accordion-header:hover {
+      background-color: #8f1f3f;
+    }
+    .accordion-content {
+      padding: 15px 20px;
+      border: 1px solid #b22244;
+      border-top: none;
+      border-radius: 0 0 12px 12px;
+      background: #321b3f;
+      color: #ffddb3;
+      display: none;
+      box-shadow: inset 0 0 15px rgba(216, 27, 76, 0.5);
+    }
+  </style>
+  <script>
+    $(document).ready(function() {
+      $(".accordion-header").click(function() {
+        $(this).next(".accordion-content").slideToggle();
+        $(".accordion-content").not($(this).next()).slideUp();
+      });
+    });
+  </script>
+</head>
+<body>
+
+<nav>
+  <ul>
+    <li><a href="index.html">Welcome</a></li>
+    <li><a href="coursework.html">Coursework</a></li>
+    <li><a href="hobbies.html">Hobbies</a></li>
+    <li><a href="resume.html" class="active">Resume</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+</nav>
+
+<div class="container">
+  <h1>My Resume</h1>
+  
+  <p>My name is Khadijah McDole Gunn, and I am a dedicated student at WCCS studying Computer Information Systems. I am committed to developing the skills necessary to succeed in the tech industry and bring creative solutions to complex problems.</p>
+
+  <p>Throughout my academic journey, I have gained experience in programming, database management, and networking fundamentals. I am continually enhancing my skills by taking relevant courses and applying what I learn through practical projects.</p>
+
+  <p>This resume highlights my work experience, education, and technical skills. Feel free to download the printable version below for your convenience.</p>
+
+  <a href="resume-printable.pdf" target="_blank" style="color:#ffb703; font-weight:bold;">Printable Resume (PDF)</a>
+
+  <div class="accordion-section">
+    <div class="accordion-header">Work Experience</div>
+    <div class="accordion-content">
+      <p><strong>Intern at Tech Company</strong> (Summer 2024)</p>
+      <ul>
+        <li>Assisted with database management</li>
+        <li>Developed web application features</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="accordion-section">
+    <div class="accordion-header">Education</div>
+    <div class="accordion-content">
+      <p><strong>Computer Information Systems - WCCS</strong></p>
+      <p>Expected graduation: 2026</p>
+    </div>
+  </div>
+
+  <div class="accordion-section">
+    <div class="accordion-header">Skills</div>
+    <div class="accordion-content">
+      <ul>
+        <li>HTML, CSS, JavaScript</li>
+        <li>SQL, Database Management</li>
+        <li>Network Fundamentals</li>
+        <li>Problem Solving & Critical Thinking</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
